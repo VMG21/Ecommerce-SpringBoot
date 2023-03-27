@@ -22,6 +22,9 @@ import java.util.Optional;
 public class ItemController {
 
     @Autowired
+    itemService itemService;
+
+    @Autowired
     ItemRepository itemRepository;
 
     @GetMapping("/items")
@@ -64,16 +67,6 @@ public class ItemController {
 
         return redirectView;
     }
-
-//    @DeleteMapping("/items/{id}")
-//    public ResponseEntity<HttpStatus> deleteItem(@PathVariable("id") long id){
-//        try {
-//            itemRepository.deleteById(id);
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 
     @DeleteMapping("/itemsD")
     public ResponseEntity<HttpStatus> deleteAllItems() {

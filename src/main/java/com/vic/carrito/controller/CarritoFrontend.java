@@ -3,10 +3,10 @@ package com.vic.carrito.controller;
 import com.vic.carrito.bl.itemService;
 import com.vic.carrito.dl.Customer;
 import com.vic.carrito.dl.Item;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class CarritoFrontend {
@@ -44,6 +44,28 @@ public class CarritoFrontend {
     @GetMapping("/items/{id}")
     public String deleteItem(@PathVariable Long id) {
         itemService.deleteItemById(id);
+        return "redirect:/items";
+    }
+
+    @GetMapping("/items/edit/{id}")
+    public String editItem(@PathVariable Long id, Model model) {
+        model.addAttribute("item", itemService.getItemById(id));
+        return "updateItem";
+    }
+
+    @PostMapping(value="/items/{id}", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
+            produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public String updateStudent(@PathVariable Long id,
+                                @ModelAttribute("item") Item item, Model model) {
+
+        Item existingItem = itemService.getItemById(id);
+        existingItem.setItemId(id);
+        existingItem.setName(item.getName());
+        existingItem.setDescription(item.getDescription());
+        existingItem.setPrice(item.getPrice());
+
+        itemService.updateItem(existingItem);
+
         return "redirect:/items";
     }
 

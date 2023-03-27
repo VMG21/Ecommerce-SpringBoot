@@ -34,8 +34,8 @@
                 <td th:text="${items.description}" scope="row"></td>
                 <td th:text="${items.price}" scope="row"></td>
                 <td>
-<!--                    <a th:href = "@{/students/edit/{id}(id=${student.id})}"-->
-<!--                       class = "btn btn-primary">Update</a>-->
+                    <a th:href = "@{/items/edit/{id}(id=${items.itemId})}"
+                       class = "btn btn-primary">Update</a>
 
                     <a th:href = "@{/items/{id}(id=${items.itemId})}"
                        class = "btn btn-danger">Delete</a>

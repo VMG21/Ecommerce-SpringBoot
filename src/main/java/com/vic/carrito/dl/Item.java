@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "items")
 public class Item {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "item_id")
@@ -30,6 +31,10 @@ public class Item {
 
     public long getItemId() {
         return itemId;
+    }
+
+    public void setItemId(long itemId) {
+        this.itemId = itemId;
     }
 
     public String getName() {
