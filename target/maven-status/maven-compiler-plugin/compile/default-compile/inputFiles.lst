@@ -1,0 +1,14 @@
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/repository/ItemRepository.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/repository/ShoppingCartItemRepository.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/repository/ShoppingCartRepository.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/controller/ItemController.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/controller/CarritoFrontend.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/controller/ShoppingCartController.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/dl/Item.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/dl/Customer.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/dl/ShoppingCartItem.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/controller/ShoppingCartItemController.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/dl/ShoppingCart.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/controller/CustomerController.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/CarritoApplication.java
+/home/vmg/Desktop/carrito/src/main/java/com/vic/carrito/repository/CustomerRepository.java
