@@ -10,7 +10,7 @@
 
     <body>
         <div class="container">
-            <form method="post" th:action="@{/items/edit/{id} (id=${item.itemId})}" th:object="${item}" class="card-body cardbody-color p-lg-5">
+            <form method="post" th:action="@{/items/{id} (id=${item.itemId})}" th:object="${item}" class="card-body cardbody-color p-lg-5">
 
                 <div class="mb-3">
                     <input type="text" class="form-control" aria-describedby="emailHelp"

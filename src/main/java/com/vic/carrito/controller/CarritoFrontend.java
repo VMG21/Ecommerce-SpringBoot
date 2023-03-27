@@ -25,6 +25,13 @@ public class CarritoFrontend {
         return "register";
     }
 
+    @GetMapping("/shop")
+    public String shop(Model model){
+        model.addAttribute("item", itemService.getAllItems());
+
+        return "shop";
+    }
+
     @GetMapping("/items")
     public String item(Model model){
         model.addAttribute("item", itemService.getAllItems());
